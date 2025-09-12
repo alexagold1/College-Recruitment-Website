@@ -142,7 +142,7 @@ nav {
   }
 }
 
-/* Responsive */
+/* Responsive Typography */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.5rem;
@@ -153,96 +153,70 @@ nav {
   }
 }
 
+/* Fixed and Clean Apply Button Styles */
 .btn-7 {
+  position: relative;
+  display: inline-block;
   background: linear-gradient(
     0deg,
     rgba(255, 151, 0, 1) 0%,
     rgba(251, 75, 2, 1) 100%
   );
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  width: 25%;
-  cursor: pointer;
   color: white;
   font-weight: 600;
   font-size: 1rem;
+  border: none;
   border-radius: 4px;
+  height: 50px;
+  padding: 0 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out;
 }
 
 .btn-7 span {
   position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
 }
 
-.btn-7:before,
-.btn-7:after {
-  position: absolute;
+.btn-7::before,
+.btn-7::after {
   content: "";
-  right: 0;
-  bottom: 0;
+  position: absolute;
   background: rgba(251, 75, 2, 1);
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
-    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.btn-7:before {
-  height: 0%;
-  width: 2px;
+.btn-7::before {
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
-.btn-7:after {
-  width: 0%;
-  height: 2px;
+.btn-7::after {
+  height: 0;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+/* Hover effect with button fill animation, but keep text white */
+.btn-7:hover::before {
+  width: 100%;
+}
+
+.btn-7:hover::after {
+  height: 100%;
 }
 
 .btn-7:hover {
-  color: rgba(251, 75, 2, 1);
   background: transparent;
+  color: white; /* Keep text white on hover */
 }
 
-.btn-7:hover:before {
-  height: 100%;
-}
-
-.btn-7:hover:after {
-  width: 100%;
-}
-
-.btn-7 span:before,
-.btn-7 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  background: rgba(251, 75, 2, 1);
-  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
-    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.btn-7 span:before {
-  width: 2px;
-  height: 0%;
-}
-
-.btn-7 span:after {
-  height: 2px;
-  width: 0%;
-}
-
-.btn-7 span:hover:before {
-  height: 100%;
-}
-.btn-7 span:hover:after {
-  width: 100%;
-}
-
+/* White Box Under Hero */
 .white-box {
   position: relative;
   z-index: 3;
@@ -255,6 +229,152 @@ nav {
   font-weight: 600;
   text-align: center;
   width: 100%;
-  height: 200px;
-  margin-top: 300px;
+  height: 700px;
+  margin-top: 160px;
+  opacity: 0.9;
 }
+
+@gray-darker:               #444444;
+@gray-dark:                 #696969;
+@gray:                      #999999;
+@gray-light:                #cccccc;
+@gray-lighter:              #ececec;
+@gray-lightest:             lighten(@gray-lighter,4%);
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: @gray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid @gray-light;
+  //border-radius: 1rem;
+  color: @gray-dark;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  &:hover {
+    .card__image {
+      filter: contrast(100%);
+    }
+  }
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  //filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; // 3:2 aspect ratio
+    }
+  }
+}
+
+.card__image--flowers {
+  background-image: url(https://unsplash.it/800/600?image=82);
+}
+
+.card__image--river {
+  background-image: url(https://unsplash.it/800/600?image=11);
+}
+
+.card__image--record {
+  background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.card__image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
+
+.card__title {
+  color: gray-dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+

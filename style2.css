@@ -1,0 +1,140 @@
+/* Reset & base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+body {
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  color: #999999;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  overflow-x: hidden;
+  background-image: url(imgs/walking.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid #0c2340;
+  background: #d44500;
+  padding: 1em 0;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    grid-template-columns: 100%;
+    grid-gap: 1em;
+  }
+}
+
+.item1 {
+  grid-column: 1;
+}
+.item2 {
+  grid-column: 2;
+}
+.item3 {
+  grid-column: 4;
+}
+.item4 {
+  grid-column: 5;
+}
+
+.logo {
+  grid-column: 3;
+  background-image: url("imgs/cuselogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10vh;
+}
+
+.navLinks {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.navLinks:hover {
+  color: #0c2340;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 1em 1em;
+}
+
+h1 {
+  text-align: center;
+  color: #e66221;
+  text-shadow: 3px 3px 6px #0c2340;
+  padding: 0 1rem;
+  font-family: ShermanSerif, Georgia, serif;
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 200px;
+}
+
+/* White Box Styling and Animation */
+.white-box {
+  position: fixed; /* stays on left while scrolling */
+  top: 200px; /* align with your h1 margin-top */
+  left: 20px;
+  width: 300px;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #0c2340;
+  font-family: ShermanSerif, Georgia, serif;
+  font-weight: 600;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 100;
+  margin-top: 300px;
+  width: 500px;
+  height: 300px;
+}
+
+/* When visible class added by JS */
+.white-box.visible {
+  opacity: 0.95;
+  transform: translateX(0);
+}
+
+/* Responsive: hide the fixed box on smaller screens */
+@media screen and (max-width: 768px) {
+  .white-box {
+    position: static;
+    width: auto;
+    margin: 2rem auto;
+    transform: translateX(0);
+    opacity: 1 !important;
+    box-shadow: none;
+  }
+}
+p {
+  margin-top: 150px;
+}

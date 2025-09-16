@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -7,28 +7,22 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-  background-color: #f0f0f0;
-}
-
+html,
 body {
   height: 100%;
   font-family: "Ubuntu", sans-serif;
-  color: #999999;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
-  overflow-x: hidden;
-  background-image: url(imgs/walking.webp);
-  background-repeat: no-repeat;
+  background-image: url("imgs/walking.webp");
   background-size: cover;
+  background-repeat: no-repeat;
+  color: #0c2340;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navigation */
 nav {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -39,6 +33,7 @@ nav {
   padding: 1em 0;
   position: relative;
   z-index: 10;
+  font-family: "Ubuntu", sans-serif;
 }
 
 @media screen and (max-width: 900px) {
@@ -70,6 +65,8 @@ nav {
   height: 10vh;
 }
 
+/* Nav Links */
+
 .navLinks {
   font-size: 1.2em;
   text-transform: uppercase;
@@ -84,57 +81,121 @@ nav {
   padding: 1em 1em;
 }
 
+/* Main Title */
 h1 {
+  font-family: ShermanSerif, Georgia, serif;
   text-align: center;
-  color: #e66221;
-  text-shadow: 3px 3px 6px #0c2340;
+  margin: 2rem 0;
+  color: #d44500;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px #0c2340;
+}
+
+/* Container for sidebar and content */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
   padding: 0 1rem;
+  gap: 2rem;
+}
+
+.schools-list {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 1rem;
+  background: rgba(255 255 255 / 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.school-btn {
+  background-color: #d44500;
+  border: none;
+  padding: 12px 16px;
+  color: white;
+  font-weight: 700;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.school-btn:hover,
+.school-btn:focus {
+  background-color: #a83400;
+  outline: none;
+}
+
+.school-btn.active {
+  background-color: #0c2340;
+  color: #d44500;
+  cursor: default;
+}
+
+/* Content Area */
+.programs-container {
+  flex: 3 1 0;
+  background: rgba(255 255 255 / 0.95);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  max-height: 75vh;
+  font-family: "Ubuntu", sans-serif;
+  color: #0c2340;
+}
+
+.programs h2 {
   font-family: ShermanSerif, Georgia, serif;
   font-weight: 700;
-  font-style: normal;
-  margin-top: 200px;
+  color: #d44500;
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
 }
 
-/* White Box Styling and Animation */
-.white-box {
-  position: fixed; /* stays on left while scrolling */
-  top: 200px; /* align with your h1 margin-top */
-  left: 20px;
-  width: 300px;
-  padding: 2rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  color: #0c2340;
-  font-family: ShermanSerif, Georgia, serif;
-  font-weight: 600;
-  text-align: left;
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  z-index: 100;
-  margin-top: 300px;
-  width: 500px;
-  height: 300px;
+.programs ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+  list-style-type: disc;
+  color: #333;
 }
 
-/* When visible class added by JS */
-.white-box.visible {
-  opacity: 0.95;
-  transform: translateX(0);
+.programs p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
-/* Responsive: hide the fixed box on smaller screens */
-@media screen and (max-width: 768px) {
-  .white-box {
-    position: static;
-    width: auto;
-    margin: 2rem auto;
-    transform: translateX(0);
-    opacity: 1 !important;
-    box-shadow: none;
+/* Footer */
+footer {
+  background-color: #0c2340;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
   }
-}
-p {
-  margin-top: 150px;
+  .schools-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .school-btn {
+    flex: 1 1 45%;
+    font-size: 0.9rem;
+  }
+  .programs-container {
+    max-height: none;
+  }
 }

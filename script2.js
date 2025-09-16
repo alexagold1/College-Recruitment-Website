@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const whiteBox = document.querySelector(".white-box");
-  const heading = document.querySelector("h1");
+  const buttons = document.querySelectorAll(".schools-list button");
+  const sections = document.querySelectorAll(".programs-container .programs");
 
-  // Check if heading is visible, then show white box
-  function checkVisibility() {
-    const rect = heading.getBoundingClientRect();
-    if (
-      rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) * 0.9
-    ) {
-      whiteBox.classList.add("visible");
-      window.removeEventListener("scroll", checkVisibility);
-    }
-  }
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active class from all buttons and hide all sections
+      buttons.forEach((b) => b.classList.remove("active"));
+      sections.forEach((sec) => (sec.hidden = true));
 
-  window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // initial check on page load
+      // Add active class to clicked button and show matching section
+      btn.classList.add("active");
+      const schoolId = btn.getAttribute("data-school");
+      const targetSection = document.getElementById(schoolId);
+      if (targetSection) {
+        targetSection.hidden = false;
+      }
+    });
+  });
 });

@@ -11,12 +11,32 @@ html,
 body {
   height: 100%;
   font-family: "Ubuntu", sans-serif;
-  background-image: url("imgs/walking.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: relative;
   color: #0c2340;
+  overflow-x: hidden;
 }
 
+/* Parallax Background Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("imgs/walking.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.6) blur(2px);
+  transform: scale(1.05);
+}
+
+/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -24,6 +44,7 @@ img {
 
 /* Navigation */
 nav {
+  position: sticky;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
@@ -66,7 +87,6 @@ nav {
 }
 
 /* Nav Links */
-
 .navLinks {
   font-size: 1.2em;
   text-transform: uppercase;
@@ -99,6 +119,7 @@ h1 {
   margin: 0 auto 4rem;
   padding: 0 1rem;
   gap: 2rem;
+  margin-top: 100px;
 }
 
 .schools-list {
@@ -107,7 +128,8 @@ h1 {
   flex-direction: column;
   gap: 12px;
   padding: 1rem;
-  background: rgba(255 255 255 / 0.95);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -141,7 +163,8 @@ h1 {
 /* Content Area */
 .programs-container {
   flex: 3 1 0;
-  background: rgba(255 255 255 / 0.95);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(2px);
   padding: 1.5rem 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -172,15 +195,6 @@ h1 {
   line-height: 1.4;
 }
 
-/* Footer */
-footer {
-  background-color: #0c2340;
-  color: white;
-  padding: 1.5rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .container {
@@ -199,14 +213,28 @@ footer {
     max-height: none;
   }
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 100px;
+}
+
+/* Card Container */
 .card-container {
+  flex: 1 1 300px;
   max-width: 400px;
-  margin: 2rem auto;
-  font-family: "Ubuntu", sans-serif;
+  display: flex;
 }
 
 /* Card Styling */
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
   background: #ff9d41;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(12, 35, 64, 0.2);
@@ -239,23 +267,21 @@ footer {
   font-size: 1.6rem;
   font-weight: 700;
   color: #ffffff;
- text-shadow: 3px 3px 4px black;
+  text-shadow: 3px 3px 4px black;
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  
 }
 
 /* Card Content */
 .card-content {
   padding: 1.2rem;
   font-size: 1rem;
-  color: #0c2340;
-  line-height: 1.5;
   color: white;
+  line-height: 1.5;
   text-shadow: 2px 2px 4px black;
-font-family: "skolar-sans-latin", sans-serif;
-font-weight: 600;
-font-style: normal;
+  font-family: "skolar-sans-latin", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* Card Action */
@@ -263,7 +289,6 @@ font-style: normal;
   padding: 0.75rem 1.2rem;
   background-color: #16365e;
   text-align: right;
-  
 }
 
 .card-action a {
@@ -275,4 +300,8 @@ font-style: normal;
 
 .card-action a:hover {
   color: #a83400;
+}
+
+.title {
+  margin-top: 100px;
 }

@@ -1,21 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const whiteBox = document.querySelector(".white-box");
+window.addEventListener('scroll', () => {
+  const whiteBox = document.querySelector('.white-box');
+  const scrollPosition = window.scrollY || window.pageYOffset;
 
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <=
-      (window.innerHeight || document.documentElement.clientHeight) * 0.9
-    );
+  // You can adjust the scroll trigger point (e.g., 300px) as needed
+  if (scrollPosition > 10) {
+    whiteBox.classList.add('visible');
+  } else {
+    whiteBox.classList.remove('visible');
   }
-
-  function checkVisibility() {
-    if (isInViewport(whiteBox)) {
-      whiteBox.classList.add("visible");
-      window.removeEventListener("scroll", checkVisibility);
-    }
-  }
-
-  window.addEventListener("scroll", checkVisibility);
-  checkVisibility(); // check on load as well
 });

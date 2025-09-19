@@ -97,11 +97,11 @@ nav {
 .hero-overlay {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* horizontal center */
+  justify-content: center; /* vertical center */
   z-index: 2;
   text-align: center;
   color: #e66221;
@@ -110,7 +110,7 @@ nav {
   font-family: ShermanSerif, Georgia, serif;
   font-weight: 700;
   font-style: normal;
-  margin-top: 200px; /* keep or reduce */
+  margin-top: 0; /* remove extra margin so it's truly centered */
 }
 
 .hero-content {
@@ -118,7 +118,10 @@ nav {
   max-width: 80%;
   animation: fadeInUp 1s ease-out;
   margin-bottom: 1.5rem;
+  text-align: center; /* center text */
+  margin-top: 700px;
 }
+
 
 .hero-content h1 {
   font-size: 4rem;

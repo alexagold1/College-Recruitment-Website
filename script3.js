@@ -23,28 +23,7 @@ const contentData = {
   },
 };
 
-const buttons = document.querySelectorAll(".side-nav button");
-const contentArea = document.getElementById("content-area");
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Remove active from all buttons
-    buttons.forEach((btn) => btn.classList.remove("active"));
-    // Add active to clicked button
-    button.classList.add("active");
-
-    const key = button.getAttribute("data-key");
-    const section = contentData[key];
-
-    // Update content area
-    contentArea.innerHTML = `
-      <h2>${section.title}</h2>
-      <p>${section.text}</p>
-    `;
-    // Move focus for accessibility
-    contentArea.focus();
-  });
-});
 // Bootstrap bundle loaded in HTML handles carousel functionality
 
 // Club search filter logic

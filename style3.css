@@ -382,3 +382,14 @@ blockquote {
 #newQuoteBtn:hover {
   background-color: #ff6f1e;
 }
+h1{
+   font-family: ShermanSerif, Georgia, serif;
+  text-align: center;
+  margin: 2rem 0;
+  color: #d44500;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px #0c2340;
+  margin-bottom: 100px;
+  margin-top: 200px;
+}

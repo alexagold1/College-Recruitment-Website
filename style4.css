@@ -259,3 +259,23 @@ p {
 section.bg-light p.lead {
   color: black !important;
 }
+
+/* --- Section Spacing --- */
+.section-spacing {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Remove all background from content */
+.bg-transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.list-group,
+.list-group-flush,
+.list-group-numbered {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}

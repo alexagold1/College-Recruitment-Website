@@ -1,14 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Syracuse Recruitment</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cost & Financial Aid | Syracuse University</title>
+
+    <!-- Bootstrap + FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="style3.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.typekit.net/dsr1cun.css" />
-    <link rel="icon" type="image/x-icon" href="imgs/cuselogo.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/dsr1cun.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style4.css" />
 </head>
 
 <body>
@@ -18,159 +22,138 @@
             <div class="item2"><a href="index2.html" class="navLinks">Academic Programs</a></div>
             <div class="logo"></div>
             <div class="item3"><a href="index3.html" class="navLinks">Student Life</a></div>
-            <div class="item4"><a href="index4.html" class="navLinks">Cost and Financial Aid</a></div>
+            <div class="item4"><a href="index4.html" class="navLinks active">Cost & Financial Aid</a></div>
         </nav>
     </header>
 
-    <main class="container">
+    <!-- Parallax Hero -->
+    <section class="hero-parallax text-white text-center d-flex align-items-center justify-content-center">
+        <div class="container px-4 px-md-5">
+            <h1 class="display-4 fw-bold mb-3">Cost & Financial Aid</h1>
+            <p class="lead mb-4">Empowering your future with Syracuse support</p>
+            <a href="#aid-apply" class="btn btn-orange btn-lg shadow-sm">How to Apply</a>
+        </div>
+    </section>
 
-        <!-- Section 1: Campus Facilities & Amenities -->
-        <section id="facilities" class="section-block">
-            <h2>Campus Facilities &amp; Amenities</h2>
-            <div class="facilities-icons">
-                <div class="facility-card">
-                    <img src="imgs/library.jpg" alt="Library Icon" />
-                    <h3>24/7 Libraries</h3>
-                    <p>Access to extensive collections and quiet study spaces all day and night.
+    <!-- Tuition Overview -->
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-md-5">
+            <h2 class="section-title text-center mb-4">Tuition & Fees</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-4">
+                        Syracuse University is committed to transparency and affordability.
                     </p>
-                    <p>(Bird Library,
-                        Carnegie Library,
-                        King + King Architecture Library.)</p>
-                </div>
-                <div class="facility-card">
-                    <img src="imgs/labs.jpg" alt="Laboratory Icon" />
-                    <h3>Modern Labs</h3>
-                    <p>State-of-the-art labs with latest equipment across multiple disciplines.</p>
-                    <p> (Blatt BioImaging Center, High-performance computing, Special Collections
-                        Research Center.)</p>
-                </div>
-                <div class="facility-card">
-                    <img src="imgs/dining.jpg" alt="Dining Icon" />
-                    <h3> Dining</h3>
-                    <p>Varied food options catering to all dietary needs and preferences.</p>
-                    <p> (Orange Dining Center,
-                        Brockway Dining Center,
-                        Ernie Davis Dining Center,
-                        Graham Dining Center.)</p>
-                </div>
-                <div class="facility-card">
-                    <img src="imgs/gym.jpg" alt="Gym Icon" />
-                    <h3>Recreational Fitness Centers</h3>
-                    <p>Fitness centers, sports courts, and wellness programs to keep you active.</p>
-                    <p> (Barnes Center at The Arch,
-                        Skytop Recreation Area.)</p>
+                    <ul class="list-group list-group-flush shadow-sm rounded">
+                        <li class="list-group-item"><strong>Graduate Tuition:</strong> $1,734 per credit hour</li>
+                        <li class="list-group-item"><strong>Annual Estimate:</strong> $30,000–$42,000</li>
+                        <li class="list-group-item"><strong>Other Fees:</strong> Health, tech, lab, and activity fees
+                            may apply</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Parallax Section -->
-        <section class="parallax-section">
-            <div class="parallax-overlay">
-                <h2>Experience Syracuse University</h2>
-                <p>Where ambition meets tradition in a vibrant campus community.</p>
-            </div>
-        </section>
-
-        <!-- Section 2: Student Organizations & Clubs -->
-        <section id="organizations" class="section-block bg-light">
-            <h2>Student Organizations &amp; Clubs</h2>
-            <input type="text" id="clubSearch" placeholder="Search clubs..."
-                aria-label="Search Student Organizations" />
-            <div class="cards-container" id="clubsContainer">
-                <article class="org-card" tabindex="0">
-                    <h3>International Student Association</h3>
-                    <p>Connecting diverse cultures through events and support networks.</p>
-                </article>
-                <article class="org-card" tabindex="0">
-                    <h3>Environmental Club</h3>
-                    <p>Promoting sustainability and environmental awareness on campus.</p>
-                </article>
-                <article class="org-card" tabindex="0">
-                    <h3>Entrepreneurship Society</h3>
-                    <p>Workshops and competitions for aspiring student entrepreneurs.</p>
-                </article>
-                <article class="org-card" tabindex="0">
-                    <h3>Music &amp; Arts Collective</h3>
-                    <p>Fostering creativity with concerts, exhibitions, and performances.</p>
-                </article>
-                <article class="org-card" tabindex="0">
-                    <h3>Sports Club</h3>
-                    <p>Competitive and recreational sports teams and activities.</p>
-                </article>
-                <article class="org-card" tabindex="0">
-                    <h3>Debate Team</h3>
-                    <p>Sharpen your argument skills and compete nationally.</p>
-                </article>
-            </div>
-        </section>
-
-        <!-- Section 3: Social & Extracurricular Activities Carousel -->
-        <section id="activities" class="section-block">
-            <h2> Extracurricular Activities</h2>
-
-            <div id="activitiesCarousel" class="carousel slide" data-bs-ride="carousel"
-                aria-label="Social Activities Carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="imgs/afterdark.jpg" class="d-block w-100" alt="Orange After Dark Event" />
-                        <div class="carousel-caption">
-                            <h3>Orange After Dark</h3>
-                            <p>Evening social events with music, games, and fun all around campus.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="imgs/volunteering.jpg" class="d-block w-100" alt="Volunteering Event" />
-                        <div class="carousel-caption">
-                            <h3>Community Volunteering</h3>
-                            <p>Make a difference by participating in local outreach programs.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="imgs/sports.webp" class="d-block w-100" alt="Sports Event" />
-                        <div class="carousel-caption">
-                            <h3>Campus Sports</h3>
-                            <p>Join intramural teams or cheer on the Orange at exciting games.</p>
-                        </div>
+    <!-- Aid Options -->
+    <section class="py-5 bg-orange text-white">
+        <div class="container px-4 px-md-5">
+            <h2 class="section-title text-center mb-5 text-white">Scholarships & Financial Aid</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="aid-card text-center px-3 py-4 shadow-sm rounded">
+                        <i class="fas fa-award fa-3x mb-3"></i>
+                        <h5 class="mb-2">Merit Scholarships</h5>
+                        <p>Automatically considered upon applying to any graduate program.</p>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#activitiesCarousel"
-                    data-bs-slide="prev" aria-label="Previous Slide">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#activitiesCarousel"
-                    data-bs-slide="next" aria-label="Next Slide">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                </button>
-            </div>
-        </section>
-
-        <!-- Section 4: Housing Options & Cost -->
-        <section id="housing" class="section-block bg-light">
-            <h2>Housing Options &amp; Cost</h2>
-            <div class="housing-cards">
-                <div class="housing-card">
-                    <h3>Traditional Dorms (Freshman)</h3>
-                    <p>Shared & single rooms in residence halls on North and South Campus. (DellPlain Hall / Ernie Davis
-                        Hall / Oren Lyons Hall / Shaw Hall / Watson Hall/ Day Hall / Flint Hall)</p>
-                    <p><strong>Cost:</strong> $5,760 (Split Room) - $6,170 (Single) </p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="aid-card text-center px-3 py-4 shadow-sm rounded">
+                        <i class="fas fa-money-bill-wave fa-3x mb-3"></i>
+                        <h5 class="mb-2">Federal/State Aid</h5>
+                        <p>Submit your FAFSA (code: <strong>002882</strong>) to qualify for grants & loans.</p>
+                    </div>
                 </div>
-                <div class="housing-card">
-                    <h3>Advanced Housing (Sophomores)</h3>
-                    <p>Private or shared appartment with shared common areas for more space. (Milton Hall)</p>
-                    <p><strong>Cost:</strong> $7,210 (Single), $6,690 (Double), $6,220 (Triple), $8,200 (Qudruple)</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="aid-card text-center px-3 py-4 shadow-sm rounded">
+                        <i class="fas fa-briefcase fa-3x mb-3"></i>
+                        <h5 class="mb-2">Graduate Assistantships</h5>
+                        <p>Includes stipends & tuition waivers for qualified candidates.</p>
+                    </div>
                 </div>
-                <div class="housing-card">
-                    <h3>Off-Campus Apartments (upperclassmen)</h3>
-                    <p>Options available nearby for upperclassmen and graduate students.</p>
-                    <p><strong>Cost:</strong> Varies by location</p>
+                <div class="col-md-6 col-lg-3">
+                    <div class="aid-card text-center px-3 py-4 shadow-sm rounded">
+                        <i class="fas fa-credit-card fa-3x mb-3"></i>
+                        <h5 class="mb-2">Payment Plans</h5>
+                        <p>Flexible options available through the Bursar’s Office.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- Stats -->
+    <section class="py-5 bg-navy text-white text-center" id="tuition-stats">
+        <div class="container px-4 px-md-5">
+            <h2 class="section-title text-white mb-4">Syracuse Tuition & Aid Stats</h2>
+            <p class="mb-5 text-light fs-5">How Syracuse helps thousands achieve more</p>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card shadow-sm rounded py-4 px-3">
+                        <div class="counter" data-target="9600">0</div>
+                        <p class="mt-2 mb-0 fs-5">Grad Students</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card shadow-sm rounded py-4 px-3">
+                        <div class="counter" data-target="87">0</div>
+                        <p class="mt-2 mb-0 fs-5">% Receive Aid</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card shadow-sm rounded py-4 px-3">
+                        <div class="counter" data-target="22000">0</div>
+                        <p class="mt-2 mb-0 fs-5">Avg. Aid Package ($)</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card shadow-sm rounded py-4 px-3">
+                        <div class="counter" data-target="50">0</div>
+                        <p class="mt-2 mb-0 fs-5">Scholarship Programs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- How to Apply -->
+    <section class="py-5 bg-light" id="aid-apply">
+        <div class="container px-4 px-md-5">
+            <h2 class="section-title text-center mb-4">How to Apply for Financial Aid</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ol class="list-group list-group-numbered shadow-sm rounded">
+                        <li class="list-group-item">Submit FAFSA at <a href="https://studentaid.gov" target="_blank"
+                                rel="noopener">studentaid.gov</a></li>
+                        <li class="list-group-item">Apply to a Syracuse graduate/professional program</li>
+                        <li class="list-group-item">Review aid details in your <strong>MySlice portal</strong></li>
+                        <li class="list-group-item">Accept awards and complete documents</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Syracuse University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script3.js"></script>
+    <script src="script4.js"></script>
 </body>
 
 </html>

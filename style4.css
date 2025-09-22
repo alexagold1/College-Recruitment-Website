@@ -350,35 +350,3 @@ footer {
     flex-direction: column;
   }
 }
-/* === Alumni Quote Generator === */
-.quote-box {
-  text-align: center;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgb(212 121 35 / 0.15);
-}
-
-blockquote {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #4a2e0a;
-  margin-bottom: 1rem;
-}
-
-.quote-author {
-  font-weight: bold;
-  color: #d8570a;
-  font-size: 1.1rem;
-}
-
-#newQuoteBtn {
-  background-color: #d8570a;
-  border: none;
-  color: white;
-  font-weight: 600;
-}
-
-#newQuoteBtn:hover {
-  background-color: #ff6f1e;
-}

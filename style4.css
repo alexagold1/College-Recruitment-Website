@@ -28,18 +28,10 @@ nav {
   }
 }
 
-.item1 {
-  grid-column: 1;
-}
-.item2 {
-  grid-column: 2;
-}
-.item3 {
-  grid-column: 4;
-}
-.item4 {
-  grid-column: 5;
-}
+.item1 { grid-column: 1; }
+.item2 { grid-column: 2; }
+.item3 { grid-column: 4; }
+.item4 { grid-column: 5; }
 
 .logo {
   grid-column: 3;
@@ -65,24 +57,13 @@ nav {
   padding: 1em 1em;
 }
 
-/* --- Syracuse Colors --- */
-.bg-orange {
-  background-color: #d44500 !important;
-}
+/* Syracuse Colors */
+.bg-orange { background-color: #d44500 !important; }
+.bg-navy { background-color: #0b1c2c !important; }
+.text-orange { color: #d44500 !important; }
+.text-navy { color: #0b1c2c !important; }
 
-.bg-navy {
-  background-color: #0b1c2c !important;
-}
-
-.text-orange {
-  color: #d44500 !important;
-}
-
-.text-navy {
-  color: #0b1c2c !important;
-}
-
-/* --- Hero Parallax --- */
+/* Hero Parallax */
 .hero-parallax {
   height: 100vh;
   background-image: url("imgs/syracusesign.webp");
@@ -101,7 +82,7 @@ nav {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(11, 28, 44, 0.6); /* Slightly darker overlay */
+  background: rgba(11, 28, 44, 0.6);
   z-index: 1;
 }
 
@@ -110,7 +91,7 @@ nav {
   z-index: 10;
 }
 
-/* --- Buttons --- */
+/* Buttons */
 .btn-orange {
   background-color: #d44500;
   color: white;
@@ -132,8 +113,9 @@ nav {
   text-decoration: none;
 }
 
-/* --- Section Titles --- */
+/* Section Titles */
 .section-title {
+  font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
   font-weight: 700;
   color: #d44500;
@@ -142,7 +124,7 @@ nav {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Cards --- */
+/* Cards */
 .aid-card,
 .stat-card {
   background: white;
@@ -167,22 +149,20 @@ nav {
   color: #d44500;
 }
 
-/* Aid Card Headings */
 .aid-card h5 {
   font-weight: 700;
   font-size: 1.25rem;
   margin-bottom: 0.6rem;
 }
 
-/* Text in Cards */
 .aid-card p,
 .stat-card p {
   font-size: 1rem;
-  color: #444;
+  color: #000000;
   margin-bottom: 0;
 }
 
-/* --- Counters --- */
+/* Counters */
 .counter {
   font-size: 3rem;
   font-weight: 700;
@@ -191,7 +171,7 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* --- Lists --- */
+/* Lists */
 .list-group-item {
   font-size: 1.1rem;
   padding: 1rem 1.25rem;
@@ -218,15 +198,52 @@ nav {
   box-shadow: 0 3px 15px rgba(212, 69, 0, 0.3);
 }
 
-/* --- Footer --- */
-footer {
-  font-size: 0.9rem;
-  letter-spacing: 0.8px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  user-select: none;
+/* Typography */
+h1 {
+  font-family: ShermanSerif, Georgia, serif;
+  text-align: center;
+  margin: 2rem 0;
+  color: #d44500;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 5px #0c2340;
 }
 
-/* --- Responsive tweaks --- */
+p {
+  font-family: "dederon-sans-web", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
+
+/* Section Spacing */
+.section-spacing {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Remove backgrounds */
+.bg-transparent {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.list-group,
+.list-group-flush,
+.list-group-numbered {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Tuition Section - Override text color for black */
+.tuition-section,
+.tuition-section p,
+.tuition-section li {
+  color: #000 !important;
+}
+
+/* Responsive tweaks */
 @media (max-width: 576px) {
   .section-title {
     font-size: 2rem;
@@ -240,42 +257,4 @@ footer {
   .counter {
     font-size: 2.2rem;
   }
-}
-h1 {
-  font-family: ShermanSerif, Georgia, serif;
-  text-align: center;
-  margin: 2rem 0;
-  color: #d44500;
-  font-weight: 700;
-  font-size: 2.8rem;
-  text-shadow: 2px 2px 5px #0c2340;
-}
-p {
-  font-family: "dederon-sans-web", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  color: white;
-}
-section.bg-light p.lead {
-  color: black !important;
-}
-
-/* --- Section Spacing --- */
-.section-spacing {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-/* Remove all background from content */
-.bg-transparent {
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-.list-group,
-.list-group-flush,
-.list-group-numbered {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
 }

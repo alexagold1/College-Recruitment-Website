@@ -13,17 +13,56 @@
 
 <body>
     <header>
-        <nav>
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav">
             <div class="item1"><a href="index.html" class="navLinks">Home</a></div>
             <div class="item2"><a href="index2.html" class="navLinks">Academic Programs</a></div>
             <div class="logo"></div>
             <div class="item3"><a href="index3.html" class="navLinks">Student Life</a></div>
             <div class="item4"><a href="index4.html" class="navLinks">Cost and Financial Aid</a></div>
         </nav>
+        <nav class="navbar navbar-expand-lg mobile-nav custom-navbar d-lg-none">
+            <div class="container-fluid justify-content-between align-items-center">
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar"
+                    aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Centered Logo -->
+                <div class="mobile-logo-container mx-auto">
+                    <a class="navbar-brand logo" href="index.html"></a>
+                </div>
+
+                <!-- Empty spacer to balance layout -->
+                <div class="invisible-toggler d-none d-sm-block" style="width: 40px;"></div>
+
+                <!-- Dropdown Menu -->
+                <div class="collapse navbar-collapse text-center mt-3" id="mobileNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html">Academic Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index3.html">Student Life</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index4.html">Cost and Financial Aid</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="container">
-        <div class="title"> <h1> Student Life</h1> </div>
+        <div class="title">
+            <h1> Student Life</h1>
+        </div>
 
         <!-- Section 1: Campus Facilities & Amenities -->
         <section id="facilities" class="section-block">

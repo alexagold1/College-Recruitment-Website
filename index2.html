@@ -14,12 +14,49 @@
 
 <body>
     <header>
-        <nav>
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav">
             <div class="item1"><a href="index.html" class="navLinks">Home</a></div>
             <div class="item2"><a href="index2.html" class="navLinks">Academic Programs</a></div>
             <div class="logo"></div>
             <div class="item3"><a href="index3.html" class="navLinks">Student Life</a></div>
             <div class="item4"><a href="index4.html" class="navLinks">Cost and Financial Aid</a></div>
+        </nav>
+        <nav class="navbar navbar-expand-lg mobile-nav custom-navbar d-lg-none">
+            <div class="container-fluid justify-content-between align-items-center">
+
+                <!-- Hamburger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar"
+                    aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Centered Logo -->
+                <div class="mobile-logo-container mx-auto">
+                    <a class="navbar-brand logo" href="index.html"></a>
+                </div>
+
+                <!-- Empty spacer to balance layout -->
+                <div class="invisible-toggler d-none d-sm-block" style="width: 40px;"></div>
+
+                <!-- Dropdown Menu -->
+                <div class="collapse navbar-collapse text-center mt-3" id="mobileNavbar">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index2.html">Academic Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index3.html">Student Life</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index4.html">Cost and Financial Aid</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -134,7 +171,8 @@
                     </div>
                     <div class="card-content">
                         <p>
-                            Dan Connors is the Whitman School's Facilities Manager. He comes to Whitman from the Onondaga Historical Association, where he served most recently as the General Manager. </p>
+                            Dan Connors is the Whitman School's Facilities Manager. He comes to Whitman from the
+                            Onondaga Historical Association, where he served most recently as the General Manager. </p>
                     </div>
                     <div class="card-action">
                         <a href="https://whitman.syracuse.edu/faculty-and-research/faculty-staff-directory/details/dconnors"
@@ -150,7 +188,9 @@
                     </div>
                     <div class="card-content">
                         <p>
-                           Burak Kazaz is the Steven Becker Professor of Supply Chain Management at the Whitman School of Management and the Laura J. and L. Douglas Meredith Professor for Teaching Excellence at Syracuse University. Dr. Kazaz is the Director of the Brethen Institute.
+                            Burak Kazaz is the Steven Becker Professor of Supply Chain Management at the Whitman School
+                            of Management and the Laura J. and L. Douglas Meredith Professor for Teaching Excellence at
+                            Syracuse University. Dr. Kazaz is the Director of the Brethen Institute.
                         </p>
                     </div>
                     <div class="card-action">
@@ -182,6 +222,9 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your custom script -->
     <script src="script2.js"></script>
 </body>
 

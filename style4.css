@@ -28,10 +28,18 @@ nav {
   }
 }
 
-.item1 { grid-column: 1; }
-.item2 { grid-column: 2; }
-.item3 { grid-column: 4; }
-.item4 { grid-column: 5; }
+.item1 {
+  grid-column: 1;
+}
+.item2 {
+  grid-column: 2;
+}
+.item3 {
+  grid-column: 4;
+}
+.item4 {
+  grid-column: 5;
+}
 
 .logo {
   grid-column: 3;
@@ -58,10 +66,18 @@ nav {
 }
 
 /* Syracuse Colors */
-.bg-orange { background-color: #d44500 !important; }
-.bg-navy { background-color: #0b1c2c !important; }
-.text-orange { color: #d44500 !important; }
-.text-navy { color: #0b1c2c !important; }
+.bg-orange {
+  background-color: #d44500 !important;
+}
+.bg-navy {
+  background-color: #0b1c2c !important;
+}
+.text-orange {
+  color: #d44500 !important;
+}
+.text-navy {
+  color: #0b1c2c !important;
+}
 
 /* Hero Parallax */
 .hero-parallax {
@@ -115,7 +131,7 @@ nav {
 
 /* Section Titles */
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.75rem;
   font-weight: 700;
   color: #d44500;
@@ -257,4 +273,117 @@ p {
   .counter {
     font-size: 2.2rem;
   }
+}
+
+/* Desktop Nav (grid layout) */
+.desktop-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid #0c2340;
+  background: #d44500;
+  padding: 1em 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Grid positions */
+.item1 {
+  grid-column: 1;
+}
+.item2 {
+  grid-column: 2;
+}
+.logo {
+  grid-column: 3;
+  background-image: url("imgs/cuselogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10vh;
+}
+.item3 {
+  grid-column: 4;
+}
+.item4 {
+  grid-column: 5;
+}
+
+.navLinks {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.navLinks:hover {
+  color: #0c2340;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 1em 1em;
+}
+
+/* Hide desktop nav on small screens */
+@media (max-width: 991.98px) {
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  background-color: #d44500;
+  border-bottom: 4px solid #0c2340;
+  padding: 1em 0;
+  z-index: 10;
+}
+
+/* MOBILE NAV ONLY (small screens) */
+.mobile-nav {
+  background-color: #d44500;
+  border-bottom: 4px solid #0c2340;
+  padding: 1em 0;
+  z-index: 10;
+}
+
+/* LOGO CONTAINER CENTERED IN NAVBAR */
+.mobile-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* LOGO IMAGE */
+.mobile-nav .logo {
+  background-image: url("imgs/cuselogo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 10vh;
+}
+
+/* HAMBURGER ICON */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* MOBILE NAV LINKS */
+.mobile-nav .nav-link {
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.mobile-nav .nav-link:hover {
+  color: #0c2340;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  padding: 1em 1em;
 }

@@ -318,7 +318,7 @@ body {
   backface-visibility: hidden;
   border-radius: 10px;
 }
-
+/*sdsdsd*/
 .container:hover .back {
   transform: rotateY(0deg);
 }
